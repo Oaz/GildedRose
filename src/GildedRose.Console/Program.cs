@@ -36,7 +36,30 @@ namespace GildedRose.Console
                       };
        }
 
-        public void UpdateQuality()
+       public void UpdateQuality()
+       {
+          OldUpdateQuality();
+       }
+
+       public void NewUpdateQuality()
+       {
+           var behaviors = new List<Behavior>
+                      {
+                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1}, // +5 Dexterity Vest
+                          new Behavior {SellInChange = s => s-1, QualityChange = q => q+1}, // Aged Brie
+                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1}, // Elixir of the Mongoose
+                          new Behavior {SellInChange = s => s, QualityChange = q => q}, // Sulfuras, Hand of Ragnaros
+                          new Behavior {SellInChange = s => s-1, QualityChange = q => q+1}, // Backstage passes to a TAFKAL80ETC concert
+                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1} // Conjured Mana Cake
+                      };
+          for (var i = 0; i < Items.Count; i++)
+          {
+            Items[i].SellIn = behaviors[i].SellInChange( Items[i].SellIn );
+            Items[i].Quality = behaviors[i].QualityChange( Items[i].Quality );
+          }
+       }
+
+        public void OldUpdateQuality()
         {
             for (var i = 0; i < Items.Count; i++)
             {
@@ -112,6 +135,14 @@ namespace GildedRose.Console
             }
         }
 
+    }
+
+    public delegate TRESULT Func<T,TRESULT>(T t);
+
+    public class Behavior
+    {
+        public Func<int,int> SellInChange { get; set; }
+        public Func<int,int> QualityChange { get; set; }
     }
 
     public class Item
