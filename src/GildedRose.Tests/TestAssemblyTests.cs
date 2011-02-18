@@ -28,26 +28,41 @@ namespace GildedRose.Tests
           return areEquivalent;
         }
 
+        public void Update(int step)
+        {
+            System.Console.WriteLine("================ {0} ===================", step);
+            var reference = new Program();
+            var refactored = new Program();
+            while(step-->0)
+            {
+              reference.OldUpdateQuality();
+              refactored.NewUpdateQuality();
+            }
+            Assert.IsTrue( AreEquivalent(refactored.Items, reference.Items) );
+        }
+
         [Test]
         public void Update0()
         {
-            System.Console.WriteLine("======================================");
-            var reference = new Program();
-            var refactored = new Program();
-            Assert.IsTrue( AreEqual(refactored.Items[0], reference.Items[0]) );
-            Assert.IsFalse( AreEqual(refactored.Items[0], reference.Items[1]) );
-            Assert.IsTrue( AreEquivalent(refactored.Items, reference.Items) );
+            Update(0);
         }
 
         [Test]
         public void Update1()
         {
-            System.Console.WriteLine("======================================");
-            var reference = new Program();
-            reference.OldUpdateQuality();
-            var refactored = new Program();
-            refactored.NewUpdateQuality();
-            Assert.IsTrue( AreEquivalent(refactored.Items, reference.Items) );
+            Update(1);
+        }
+
+        [Test]
+        public void Update2()
+        {
+            Update(2);
+        }
+
+        [Test]
+        public void Update3()
+        {
+            Update(3);
         }
     }
 }

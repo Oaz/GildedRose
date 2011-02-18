@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="3" failures="0" not-run="0" date="2011-02-19" time="00:07:37">
+<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="5" failures="0" not-run="0" date="2011-02-19" time="00:18:06">
   <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 2.6.27.7" platform="Unix" cwd="/home/oaz/code/agilite/ateliers/GildedRose/GildedRose" machine-name="leucate" user="oaz" user-domain="leucate" />
   <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
-  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.121" asserts="0">
+  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.119" asserts="0">
     <results>
-      <test-suite name="GildedRose" success="True" time="0.106" asserts="0">
+      <test-suite name="GildedRose" success="True" time="0.115" asserts="0">
         <results>
-          <test-suite name="Tests" success="True" time="0.104" asserts="0">
+          <test-suite name="Tests" success="True" time="0.109" asserts="0">
             <results>
-              <test-suite name="TestAssemblyTests" success="True" time="0.063" asserts="0">
+              <test-suite name="TestAssemblyTests" success="True" time="0.068" asserts="0">
                 <results>
                   <test-case name="GildedRose.Tests.TestAssemblyTests.TestTheTruth" executed="True" success="True" time="0.004" asserts="1" />
-                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update0" executed="True" success="True" time="0.030" asserts="3" />
-                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update1" executed="True" success="True" time="0.009" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update0" executed="True" success="True" time="0.016" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update1" executed="True" success="True" time="0.015" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update2" executed="True" success="True" time="0.005" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Update3" executed="True" success="True" time="0.004" asserts="1" />
                 </results>
               </test-suite>
             </results>

@@ -45,17 +45,17 @@ namespace GildedRose.Console
        {
            var behaviors = new List<Behavior>
                       {
-                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1}, // +5 Dexterity Vest
-                          new Behavior {SellInChange = s => s-1, QualityChange = q => q+1}, // Aged Brie
-                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1}, // Elixir of the Mongoose
-                          new Behavior {SellInChange = s => s, QualityChange = q => q}, // Sulfuras, Hand of Ragnaros
-                          new Behavior {SellInChange = s => s-1, QualityChange = q => q+1}, // Backstage passes to a TAFKAL80ETC concert
-                          new Behavior {SellInChange = s => s-1, QualityChange = q => q-1} // Conjured Mana Cake
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => q-1}, // +5 Dexterity Vest
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => (s<0) ? q+2 : q+1}, // Aged Brie
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => q-1}, // Elixir of the Mongoose
+                          new Behavior {SellInChange = (s,q) => s, QualityChange = (s,q) => q}, // Sulfuras, Hand of Ragnaros
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => q+1}, // Backstage passes to a TAFKAL80ETC concert
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => q-1} // Conjured Mana Cake
                       };
           for (var i = 0; i < Items.Count; i++)
           {
-            Items[i].SellIn = behaviors[i].SellInChange( Items[i].SellIn );
-            Items[i].Quality = behaviors[i].QualityChange( Items[i].Quality );
+            Items[i].SellIn = behaviors[i].SellInChange( Items[i].SellIn, Items[i].Quality );
+            Items[i].Quality = behaviors[i].QualityChange( Items[i].SellIn, Items[i].Quality );
           }
        }
 
@@ -138,11 +138,12 @@ namespace GildedRose.Console
     }
 
     public delegate TRESULT Func<T,TRESULT>(T t);
+    public delegate TRESULT Func<T1,T2,TRESULT>(T1 t1, T2 t2);
 
     public class Behavior
     {
-        public Func<int,int> SellInChange { get; set; }
-        public Func<int,int> QualityChange { get; set; }
+        public Func<int,int,int> SellInChange { get; set; }
+        public Func<int,int,int> QualityChange { get; set; }
     }
 
     public class Item
