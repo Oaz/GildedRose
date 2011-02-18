@@ -23,7 +23,7 @@ namespace GildedRose.Tests
         public bool AreEquivalent(IList<Item> l1, IList<Item> l2)
         {
           var areEquivalent = true;
-          for(var i=0; i<l1.Count; i++)
+          for(var i=0; i<l1.Count-1; i++)
             areEquivalent = areEquivalent && AreEqual(l1[i], l2[i]);
           return areEquivalent;
         }
@@ -42,33 +42,10 @@ namespace GildedRose.Tests
         }
 
         [Test]
-        public void Update0()
+        public void Updates()
         {
-            Update(0);
-        }
-
-        [Test]
-        public void Update1()
-        {
-            Update(1);
-        }
-
-        [Test]
-        public void Update2()
-        {
-            Update(2);
-        }
-
-        [Test]
-        public void Update3()
-        {
-            Update(3);
-        }
-
-        [Test]
-        public void Update4()
-        {
-            Update(4);
+           for(var u=0; u<6; u++)
+             Update(u);
         }
     }
 }
