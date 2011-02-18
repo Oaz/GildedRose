@@ -44,7 +44,7 @@ namespace GildedRose.Tests
         [Test]
         public void Updates()
         {
-           for(var u=0; u<6; u++)
+           for(var u=0; u<7; u++)
              Update(u);
         }
     }
