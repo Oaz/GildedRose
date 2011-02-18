@@ -53,7 +53,7 @@ namespace GildedRose.Console
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => noNegative((s<0) ? q-2 : q-1)}, // Elixir of the Mongoose
                           new Behavior {SellInChange = (s,q) => s, QualityChange = (s,q) => q}, // Sulfuras, Hand of Ragnaros
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => (s<10) ? ((s<5) ? ((s<0) ? 0 : q+3) : q+2) : q+1}, // Backstage passes to a TAFKAL80ETC concert
-                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) =>  (s<0) ? q-2 : q-1} // Conjured Mana Cake
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) =>  noNegative((s<0) ? q-4 : q-2)} // Conjured Mana Cake
                       };
           for (var i = 0; i < Items.Count; i++)
           {
