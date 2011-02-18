@@ -64,5 +64,11 @@ namespace GildedRose.Tests
         {
             Update(3);
         }
+
+        [Test]
+        public void Update4()
+        {
+            Update(4);
+        }
     }
 }
