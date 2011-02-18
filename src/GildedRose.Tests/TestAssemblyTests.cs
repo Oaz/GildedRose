@@ -28,9 +28,10 @@ namespace GildedRose.Tests
           return areEquivalent;
         }
 
-        //[Test]
+        [Test]
         public void Update0()
         {
+            System.Console.WriteLine("======================================");
             var reference = new Program();
             var refactored = new Program();
             Assert.IsTrue( AreEqual(refactored.Items[0], reference.Items[0]) );
@@ -41,6 +42,7 @@ namespace GildedRose.Tests
         [Test]
         public void Update1()
         {
+            System.Console.WriteLine("======================================");
             var reference = new Program();
             reference.OldUpdateQuality();
             var refactored = new Program();
