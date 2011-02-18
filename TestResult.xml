@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="2" failures="0" not-run="0" date="2011-02-19" time="00:38:09">
+<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="3" failures="0" not-run="0" date="2011-02-19" time="00:54:52">
   <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 2.6.27.7" platform="Unix" cwd="/home/oaz/code/agilite/ateliers/GildedRose/GildedRose" machine-name="leucate" user="oaz" user-domain="leucate" />
   <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
-  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.171" asserts="0">
+  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.256" asserts="0">
     <results>
-      <test-suite name="GildedRose" success="True" time="0.168" asserts="0">
+      <test-suite name="GildedRose" success="True" time="0.254" asserts="0">
         <results>
-          <test-suite name="Tests" success="True" time="0.168" asserts="0">
+          <test-suite name="Tests" success="True" time="0.253" asserts="0">
             <results>
-              <test-suite name="TestAssemblyTests" success="True" time="0.132" asserts="0">
+              <test-suite name="TestAssemblyTests" success="True" time="0.211" asserts="0">
                 <results>
-                  <test-case name="GildedRose.Tests.TestAssemblyTests.TestTheTruth" executed="True" success="True" time="0.008" asserts="1" />
-                  <test-case name="GildedRose.Tests.TestAssemblyTests.Updates" executed="True" success="True" time="0.107" asserts="31" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.TestTheTruth" executed="True" success="True" time="0.005" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.ThirtyFiveUpdatesIsEnough" executed="True" success="True" time="0.033" asserts="1" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Updates" executed="True" success="True" time="0.153" asserts="36" />
                 </results>
               </test-suite>
             </results>
