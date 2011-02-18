@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using GildedRose.Console;
+﻿using System.Collections.Generic;
 
 namespace GildedRose.Tests
 {

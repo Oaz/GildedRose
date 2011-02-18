@@ -37,11 +37,13 @@
     <Reference Include="nunit.framework">
       <HintPath>..\..\lib\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="GildedRose.Console">
+      <HintPath>..\..\src\GildedRose.Console/bin/Debug/GildedRose.Console.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
