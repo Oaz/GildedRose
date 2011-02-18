@@ -43,11 +43,13 @@ namespace GildedRose.Console
 
        public void NewUpdateQuality()
        {
+          Func<int,int> noNegative = v => (v<0) ? 0 : v;
+
            var behaviors = new List<Behavior>
                       {
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => q-1}, // +5 Dexterity Vest
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => (s<0) ? q+2 : q+1}, // Aged Brie
-                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => (s<0) ? q-2 : q-1}, // Elixir of the Mongoose
+                          new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => noNegative((s<0) ? q-2 : q-1)}, // Elixir of the Mongoose
                           new Behavior {SellInChange = (s,q) => s, QualityChange = (s,q) => q}, // Sulfuras, Hand of Ragnaros
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) => (s<10) ? q+2 : q+1}, // Backstage passes to a TAFKAL80ETC concert
                           new Behavior {SellInChange = (s,q) => s-1, QualityChange = (s,q) =>  (s<0) ? q-2 : q-1} // Conjured Mana Cake

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="2" failures="0" not-run="0" date="2011-02-19" time="00:26:36">
+<test-results name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" total="2" failures="0" not-run="0" date="2011-02-19" time="00:29:27">
   <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Unix 2.6.27.7" platform="Unix" cwd="/home/oaz/code/agilite/ateliers/GildedRose/GildedRose" machine-name="leucate" user="oaz" user-domain="leucate" />
   <culture-info current-culture="fr-FR" current-uiculture="fr-FR" />
-  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.135" asserts="0">
+  <test-suite name="./src/GildedRose.Tests/bin/Debug/GildedRose.Tests.dll" success="True" time="0.154" asserts="0">
     <results>
-      <test-suite name="GildedRose" success="True" time="0.132" asserts="0">
+      <test-suite name="GildedRose" success="True" time="0.141" asserts="0">
         <results>
-          <test-suite name="Tests" success="True" time="0.123" asserts="0">
+          <test-suite name="Tests" success="True" time="0.134" asserts="0">
             <results>
-              <test-suite name="TestAssemblyTests" success="True" time="0.079" asserts="0">
+              <test-suite name="TestAssemblyTests" success="True" time="0.094" asserts="0">
                 <results>
                   <test-case name="GildedRose.Tests.TestAssemblyTests.TestTheTruth" executed="True" success="True" time="0.004" asserts="1" />
-                  <test-case name="GildedRose.Tests.TestAssemblyTests.Updates" executed="True" success="True" time="0.056" asserts="7" />
+                  <test-case name="GildedRose.Tests.TestAssemblyTests.Updates" executed="True" success="True" time="0.071" asserts="8" />
                 </results>
               </test-suite>
             </results>
